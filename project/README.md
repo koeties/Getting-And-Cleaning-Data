@@ -1,6 +1,6 @@
 #Getting and Cleaning Data Course Project
 
-This file describes how the run_analysis.R script works to create a tidy data set from the source data in [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip]
+This file describes how the run_analysis.R script works to create a tidy data set from the source data in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 The following steps assume that all needed files are in your R working directory.
 * Unzip the source data file and rename the directory to "data" (without the quotes)
