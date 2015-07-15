@@ -15,5 +15,5 @@ The "run_analysis.R" script will do the following:
   * subject:  Integers from 1 to 30
   * activity:  Text representing activity names
   * The rest of the columns represent our mean and standard deviation measurements with values between -1 and 1.
-8. This cleaned data is then written to a text file called merged_data.txt.
-9. A second file called data_with_means.txt is written with the average of each variable for each activity and each subject.
+8. This cleaned data is then written to a text file called clean_merged_data.txt.
+9. A second file called clean_merged_data_with_means.txt is written with the average of each variable for each activity and each subject.
