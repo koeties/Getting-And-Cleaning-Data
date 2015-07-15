@@ -10,7 +10,8 @@ The "run_analysis.R" script will do the following:
 3. Use this to get a subset of completeData with the corresponding columns that only have all the mean and standard deviation measures.
 4. The column names of the subset is then cleaned to remove special characters like "(", ")", and "-".
 5. The activity_latels.txt data is then used to transform the values of completeLabel from numbers (IDs) to text (desctriptive names)
-6. The completeData, completeLabel and completeSubject data frames are then combined into a new data frame completeCleanData. 7. The first two columns of the cleanData data frame are then renamed to "subject" and "activity".  The data in completeCleanData is then of the format:
+6. The completeData, completeLabel and completeSubject data frames are then combined into a new data frame completeCleanData. 
+7. The first two columns of the cleanData data frame are then renamed to "subject" and "activity".  The data in completeCleanData is then of the format:
   * subject:  Integers from 1 to 30
   * activity:  Text representing activity names
   * The rest of the columns represent our mean and standard deviation measurements with values between -1 and 1.
