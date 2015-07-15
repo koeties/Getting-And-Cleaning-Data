@@ -7,7 +7,7 @@ The "run_analysis.R" script will do the following:
   * completeLabel <- concat data from y_train.txt and y_test.txt
   * completeSubject <- concat data from subject_train.txt and subject_test.txt
 2. Extract the mean and standard deviation measures from the features.txt file in the data root directory.
-3. Use this to get a subset of completeData with the corresponding columns that only have all the mean and standard deviation measures.
+3. Use this to get a subset of completeData with only the corresponding columns that have all the mean and standard deviation measures.
 4. The column names of the subset is then cleaned to remove special characters like "(", ")", and "-".
 5. The activity_latels.txt data is then used to transform the values of completeLabel from numbers (IDs) to text (desctriptive names)
 6. The completeData, completeLabel and completeSubject data frames are then combined into a new data frame completeCleanData. 
