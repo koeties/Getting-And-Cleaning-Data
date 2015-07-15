@@ -5,6 +5,7 @@ The resulting data set, which forms the basis for our course work, can be downlo
 The data set contains training data (in the "train" sub-directory) and test data (in the "test" sub-directory).
 
 The R analysis performs the following transformations on the original data:
+
 1. The "X", "Y", and "Subject" data from the train and test data sets are each combined:
   * completeData <- concat data from x_train.txt and x_test.txt
   * completeLabel <- concat data from y_train.txt and y_test.txt
