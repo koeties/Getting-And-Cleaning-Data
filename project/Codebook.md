@@ -17,9 +17,9 @@ The R analysis performs the following transformations on the original data
 7. The first two columns of the cleanData data frame are then renamed to "subject" and "activity".  The data in completeCleanData is then of the format:
   * subject:  Integers from 1 to 30
   * activity:  Text representing activity names
-  * The rest of the columns represent our mean and standard deviation measurements with values between -1 and 1.
+  * The rest of the columns: Integer values between -1 and 1 representing the mean and standard deviation measurements.
 8. This cleaned data is written to a text file called clean_merged_data.txt.
-9. A second file called clean_merged_data_with_means.txt will be written where each row will contain the average of each variable for each activity and each subject. The data colums:
+9. A second file called clean_merged_data_with_means.txt will be written where each row will contain the average of each measure for the activity and subject combination. The data colums:
   * subject:  Integers from 1 to 30
   * activity:  Text representing activity names
-  * The rest of the columns represent our mean and standard deviation measurements with values between -1 and 1.
+  * The rest of the columns: Integer values between -1 and 1 representing the average of each of the mean and standard deviation measurements for the subject/activity combination.
