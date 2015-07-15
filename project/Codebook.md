@@ -1,8 +1,8 @@
 #The Codebook for the course project data
 
 The data for this project was obtained in a study conducted by UCI.  A full description of the experiment and the gathering of the data can be found here:  http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-The resulting data set, which forms the basis for our course work, can be downloaded here:  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-The data set contains training data (in the "train" sub-directory) and test data in the "test" sub-directory.
+The resulting data set, which forms the basis for our course work, can be downloaded here:  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+The data set contains training data (in the "train" sub-directory) and test data (in the "test" sub-directory).
 
 The "X", "Y", and "Subject" data from the train and test files will be read into R by the "run_analysis.R" script, combined
 and saved in 3 data frames:
