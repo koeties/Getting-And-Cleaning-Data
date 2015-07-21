@@ -1,3 +1,6 @@
+# Load the plyr library
+library(plyr)
+
 # Read in our train and test data from the text files
 trainData <- read.table("./data/train/X_train.txt")
 trainLabel <- read.table("./data/train/y_train.txt")
@@ -31,8 +34,8 @@ substr(activity[2, 2], 8, 8) <- toupper(substr(activity[2, 2], 8, 8))
 substr(activity[3, 2], 8, 8) <- toupper(substr(activity[3, 2], 8, 8))
 activityLabel <- activity[completeLabel[, 1], 2]
 completeLabel[, 1] <- activityLabel
-names(completeLabel) <- "activity"
 names(completeSubject) <- "subject"
+names(completeLabel) <- "activity"
 
 # Combine the Subject, Label and Data data frames and write it to a text file
 completeCleanData <- cbind(completeSubject, completeLabel, completeData)
@@ -40,21 +43,5 @@ write.table(completeCleanData, "clean_merged_data.txt", row.name=FALSE)
 
 # Calculate the average of each variable for each activity and each subject.
 # Write the results to a text file.
-subjectLen <- length(table(completeSubject))
-activityLen <- dim(activity)[1]
-columnLen <- dim(completeCleanData)[2]
-result <- matrix(NA, nrow=subjectLen*activityLen, ncol=columnLen)
-result <- as.data.frame(result)
-colnames(result) <- colnames(completeCleanData)
-row <- 1
-for(i in 1:subjectLen) {
-    for(j in 1:activityLen) {
-        result[row, 1] <- sort(unique(completeSubject)[, 1])[i]
-        result[row, 2] <- activity[j, 2]
-        bool1 <- i == completeCleanData$subject
-        bool2 <- activity[j, 2] == completeCleanData$activity
-        result[row, 3:columnLen] <- colMeans(completeCleanData[bool1&bool2, 3:columnLen])
-        row <- row + 1
-    }
-}
-write.table(result, "clean_merged_data_with_means.txt", row.name=FALSE)
+completeCleanDataWithMeans <- ddply(completeCleanData, c("subject","activity"), numcolwise(mean))
+write.table(completeCleanDataWithMeans, "clean_merged_data_with_means.txt", row.name=FALSE)
